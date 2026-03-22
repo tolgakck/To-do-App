@@ -2,16 +2,26 @@ import { useState, useEffect } from 'react'
 import './css/App.css';
 import TodoCreate from './components/TodoCreate';
 import TodoList from './components/TodoList';
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 
 function App() {
-  const [todos, setTodos] = useState([]);
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
+  const [todos, setTodos] = useState(() => {
+    const savedTodos = localStorage.getItem('todos');
+    return savedTodos ? JSON.parse(savedTodos) : [];
+  });
   useEffect(() => {
-    const savedTodos = JSON.parse(localStorage.getItem('todos'));
-    if (savedTodos) setTodos(savedTodos);
-  }, []);
+    document.documentElement.setAttribute('data-theme', theme);
+    localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme(prev => prev === 'light' ? 'dark' : 'light');
+  };
   useEffect(() => {
     localStorage.setItem('todos', JSON.stringify(todos));
   }, [todos]);
+
   const createTodo = (newTodo) => {
     setTodos([...todos, newTodo]);
   }
@@ -30,6 +40,9 @@ function App() {
 
   return (
     <div className='App'>
+      <button onClick={toggleTheme} className="theme-toggle">
+        {theme === 'light' ? <MdDarkMode /> : <MdLightMode />}
+      </button>
       <div className='main'>
         <TodoCreate oncreateTodo={createTodo} />
         <TodoList
