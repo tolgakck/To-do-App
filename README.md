@@ -1,12 +1,27 @@
-# React + Vite
+# 📝 Modern Todo App (React 19 + Vite)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a sleek and functional Todo application built with **React 19** and **Vite**, featuring a modern user interface. The project was developed to demonstrate **CRUD** (Create, Read, Update, Delete) operations and core React principles in a real-world scenario.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Create Tasks:** Quickly add new tasks to your list.
+* **Task Listing:** View all your tasks in a clean, glassmorphism-styled dashboard.
+* **Update Tasks:** Edit your existing tasks instantly using an inline edit mode.
+* **Delete Tasks:** Remove completed or unnecessary tasks with a single click.
+* **Modern UI:** A stylish interface featuring smooth transitions and a polished look.
 
-## Expanding the ESLint configuration
+## 🚀 Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Framework:** [React 19](https://react.dev/)
+* **Build Tool:** [Vite](https://vitejs.dev/)
+* **Icons:** [React Icons](https://react-icons.github.io/react-icons/)
+* **Styling:** Custom CSS3 (Modern Flexbox & Glassmorphism)
+* **Methodology:** Developed following Agile & Scrum principles.
+
+## 🛠️ Installation & Setup
+
+To run this project on your local machine, follow these steps:
+
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/tolgakck/To-do-App.git](https://github.com/tolgakck/To-do-App.git)
